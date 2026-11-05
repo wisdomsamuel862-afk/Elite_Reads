@@ -9,7 +9,7 @@ class Admin{
         $stmt=$this->pdo->prepare($sql);
         return $stmt->execute([$name, $email, $pasword])
     }
-    public function loginAdmin($email){
+    public function loginAdmin($email, $password){
         $sql= "SELECT * FROM admins WHERE email=?";
         $stmt= $this->pdo->prepare($sql);
         return $stmt->execute([$email]);

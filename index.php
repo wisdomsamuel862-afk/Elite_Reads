@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-    <header class="header bg alert alert-primary container-fluid">
+    <header class="header bg-info container-fluid">
         <img src="" alt="logo">\
         <nav class="navbar">
             <ul>

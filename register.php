@@ -9,6 +9,7 @@ session_start();
     <title>Register</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/register.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/icons/bootstrap-icons.css">
 </head>
 <body>
 

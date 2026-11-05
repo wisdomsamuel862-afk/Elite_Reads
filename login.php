@@ -13,12 +13,16 @@ session_start();
 <body>
     <h1 id="head" class="text-center">Log In</h1>
     <div id="register">
+        <?php if(isset($_SESSION['error'])){
+            echo "<p class='alert alert-danger'>". $_SESSION['error']. "</p>";
+            unset($_SESSION['error']);
+        } ?>
     <form action="processes/login-process.php" method="POST">
     <label for="email" class="form-label">Email</label>
     <input type="text" id="email" name="email" placeholder="Enter Your Email" class="form-control">
     <label for="password" class="form-label">Password</label>
     <input type="text" id="password" name="password" placeholder="Enter Your Password" class="form-control">
-    <input type="submit" value="Log in">
+    <button type="submit">Log In</button>
 </form>
 </div>
 </body>

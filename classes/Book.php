@@ -12,14 +12,14 @@ class Book{
     }
     public function getBook($id){
         $sql="SELECT books.*, categories.name FROM books JOIN categories ON books.category_id= categories.id WHERE books.id= ? ";
-        $stmt = $this->pdo->prepare($sql)
+        $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$id]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
     public function addBook($title, $author, $description, $category_id, $cover_image){
         $sql= "INSERT INTO books(title, author, description, category_id, cover_image)VALUES(?,?,?,?,?)";
         $stmt= $this->pdo->prepare($sql);
-       return $stmt->execute([$title, $author, $description, $category_id, cover_image]);
+       return $stmt->execute([$title, $author, $description, $category_id, $cover_image]);
     }
     public function updateBook($id, $title, $author, $description, $category_id){
         $sql= "UPDATE books SET title=?, author=?, description=?, category=? WHERE id=?";
