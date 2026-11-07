@@ -8,21 +8,33 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/register.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <h1 id="head" class="text-center">Log In</h1>
+    
+   <h1 id="head" class="text-center">Log In</h1>
     <div id="register">
-        <?php if(isset($_SESSION['error'])){
+         <?php if(isset($_SESSION['error'])){
             echo "<p class='alert alert-danger'>". $_SESSION['error']. "</p>";
             unset($_SESSION['error']);
+            if(isset($_SESSION['success'])){
+                echo "<p class='alert alert-success'>". $_SESSION['success']. "</p>";
+                unset($_SESSION['success']);
+            }
         } ?>
-    <form action="processes/login-process.php" method="POST">
+        <div class="container">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+    <form action="processes/login-process.php" method="POST" class="form-container shadow" id="form">
     <label for="email" class="form-label">Email</label>
     <input type="text" id="email" name="email" placeholder="Enter Your Email" class="form-control">
     <label for="password" class="form-label">Password</label>
     <input type="text" id="password" name="password" placeholder="Enter Your Password" class="form-control">
-    <button type="submit">Log In</button>
+    <button type="submit" class="btn mt-3" id="btn">Log In</button></div>
+    <div class="col-2"></div>
+</div>
+</div>
 </form>
 </div>
 </body>

@@ -10,10 +10,11 @@ session_start();
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/register.css">
     <link rel="stylesheet" href="assets/bootstrap/css/icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <h2 class="text-center" id="head">Sign Up</h2>
+   <h2 class="text-center" id="head">Sign Up</h2>
     <?php if(isset($_SESSION['error'])){
         echo "<p class='alert alert-danger text-center'". $_SESSION['error']. "</p>";
         unset($_SESSION['error']);
@@ -35,7 +36,7 @@ session_start();
         <input type="password" id="password" placeholder="Enter Your Password" name="password" class="form-control">
         <label for="confirm_password" class="form-label">Confirm Password:</label>
         <input type="password" id="confirm_password" placeholder="Confirm Password" name="confirm_password" class="form-control">
-        <input type="submit" value="Register" class="btn btn-primary mt-3">
+        <input type="submit" value="Register" class="btn btn-primary mt-3" id="btn">
     </form>    
 
     </div>

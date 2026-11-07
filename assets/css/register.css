@@ -8,8 +8,20 @@ body{
     color: #222;
 }
 #form{
-    max-width: 700px;
+    background-color: maroon;
+    border-radius: 20px;
+    margin-top: 40px;
+    box-shadow: 0 32px 60px 18px rgba(255, 255, 255, 0.2), 0 8px 20px -8px rgba(20, 20, 20, 1), inset 0  0 0 1px whitesmoke;
 }
 #form input{
-height: 40px;
+    background-color: maroon;
+}
+#btn{
+background-color: maroon;
+color: white;
+}
+#btn:hover{
+    background-color: goldenrod;
+    transform: scale(1.30);
+    color: black;
 }

@@ -1,0 +1,64 @@
+.header{
+display: flex;
+background-color: maroon;
+justify-content: space-around;
+background-size: cover;
+}
+.header h1{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color:goldenrod;
+}
+.header h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: goldenrod;
+    text-shadow: 0 20px 35px gold;
+}
+#navbar{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+display: flex;
+justify-content: space-around;
+gap: 10px;
+flex-direction: row;
+border-radius: 30px;
+background-color: rgba(255, 255, 255, 0.2);
+backdrop-filter: blur(36px) saturate(180%);
+-webkit-backdrop-filter: blur(36px) saturation(180%);
+box-shadow: 0 32px 60px 18px rgba(255, 255, 255, 0.2), 0 8px 20px -8px rgba(20, 20, 20, 1), inset 0  0 0 1px whitesmoke;
+transition: background 0.5 ease, box-shadow 0.5 ease;
+width: auto;
+align-items: center;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    
+}
+.navbar a{
+text-decoration: none;
+color: black;
+}
+.navbar a:hover{
+    color: rgba(255, 217, 0, 0.568);
+    border-radius: 20px;
+    background-color: whitesmoke;
+    color: black;
+}
+#form{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    margin-top: 40px;
+}
+#form input{
+    background-color: goldenrod;
+}
+#btn{
+background-color: maroon;
+color: white;
+}
+#btn:hover{
+    background-color: maroon;
+    transform: scale(1.30);
+    color: black;
+}

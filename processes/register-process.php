@@ -18,7 +18,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if($password !== $confirm_password){
         $_SESSION['error']="password does not match confirm password";
     }if(empty($name) ||  empty($email) || empty($phone) || empty($password)){
-        $_SESSION['error'] = "Alll fields are required";
+        $_SESSION['error'] = "All fields are required";
         header("Location:../register.php");
         exit;
     }
@@ -29,6 +29,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 try{$hashed_password= password_hash($password, PASSWORD_DEFAULT);
     $register->registerMember($name, $email, $phone, $hashed_password);
+    header("Location: ../login.php");
+    exit;
     }catch(PDOException $e){
     echo "Registration failed. please try again later";
 }

@@ -11,28 +11,28 @@ $password = $_POST['password'];
 
 if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
     $_SESSION['error']= "Invalid Email Format";
-    header("Location:../login.php");
+    header("Location:../admin/admin-login.php");
     exit;
 }
 
-$member=$login->loginAdmin($email,$password);
+$admin=$login->loginAdmin($email);
 
-if(!$member){
+if(!$admin){
     $_SESSION['error']= "Invalid Email or Password.";
-    header("Location:../login.php");
+    header("Location:../admin/admin-login.php");
     exit;
 }
 
-if(!password_verify($password, $member['password'])){
+if(!password_verify($password, $admin['password'])){
     $_SESSION['error']="Invalid Member Password. Please try again!";
-    header("Location:../register.php");
+    header("Location:../admin/admin-register.php");
     exit;
 }
     session_regenerate_id(true);
 
-    $_SESSION['member_id'] = $member['id'];
-     $_SESSION['member_name'] = $member['name'];
-    $_SESSION['member_email'] = $member['email'];
+    $_SESSION['admin_id'] = $admin['id'];
+     $_SESSION['admin_name'] = $admin['name'];
+    $_SESSION['admin_email'] = $admin['email'];
     
-header("Location:../classes/admin-dashboard.php");
+header("Location:../admin/admin-dashboard.php");
 exit;
